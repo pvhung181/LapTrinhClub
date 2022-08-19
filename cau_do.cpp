@@ -1,12 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-typedef unsigned long long ull;
 typedef long long ll;
-typedef long double ld;
-
-const double PI  = 3.141592653589793238463;
-const ll  mod = 1e9+7;
 
 int main()
 {
@@ -16,22 +11,17 @@ int main()
     {
     	ll n ;cin>>n;
     	ll a[n];
-    	if(n==1)
-        {
-        	cout<<"NO"<<endl;
-        	continue;
-		}
+    	ll res = 0;
 		ll s = 0;
     	for(int i=0;i<n;i++)
     	   {
     	   	cin>>a[i];
+    	   	res = max(res , a[i]);
     	   	s= s + a[i];
 		   }
-    	if(s % 2 == 0 )
+    	if(s % 2 == 0 && res <= s / 2 )
     	   cout<<"YES"<<endl;
     	else
     	  cout<<"NO"<<endl;
 	}
 }
-
-
