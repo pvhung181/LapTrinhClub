@@ -19,5 +19,6 @@ int main ()
 	 	x++;
 	 }
 	 cout<<s;
+	
 }
 
